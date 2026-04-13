@@ -1,0 +1,8 @@
+{
+  "name": "agent-vibe-governor",
+  "description": "Governed vibe coding with IBA. Persistent + production-safe for any AI agent.",
+  "repository": "https://github.com/YOURUSERNAME/agent-vibe-governor",
+  "version": "0.1.0",
+  "author": "Your Name",
+  "tags": ["vibe", "governance", "iba"]
+}
