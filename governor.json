@@ -1,0 +1,14 @@
+
+### 2. `governor.json`
+```json
+{
+  "name": "agent-vibe-governor",
+  "version": "0.1.0",
+  "description": "Universal Intent-Bound Authorization layer for vibe-coded apps. Persistent memory + cryptographic drift prevention for any agentic coding tool.",
+  "author": "Your Name (@Grokilactica)",
+  "license": "MIT",
+  "tags": ["governance", "vibe-coding", "iba", "agent-security", "production-ready"],
+  "compatible_with": ["claude-code", "cline", "aider", "opencode", "goose", "cursor", "lovable", "bolt", "windsurf", "emergent"],
+  "requires": ["local-memory-layer"],
+  "provides": ["vibe-enforcement", "iba-firewall"]
+}
