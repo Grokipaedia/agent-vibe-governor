@@ -1,8 +1,8 @@
 # Installation Guide
 
-`agent-vibe-governor` is designed to be dead simple to install and use with any agentic coding tool.
+`agent-vibe-governor` is designed to be dead simple — no heavy setup, works with almost any AI coding agent.
 
-## Quick Install (Recommended)
+## Quick Install (30 seconds)
 
 ### For agents with plugin/hook support
 (Claude Code, Cline, OpenCode, Goose, etc.)
