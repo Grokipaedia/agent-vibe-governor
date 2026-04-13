@@ -1,0 +1,24 @@
+{
+  "description": "Generic IBA governance hooks for vibe coding agents",
+  "hooks": {
+    "SessionStart": [
+      {
+        "type": "command",
+        "command": "echo 'Loading vibe intent...' && [ -f intent.vibe ] || echo 'Run: vibe-init to create new intent'"
+      }
+    ],
+    "PreToolUse": [
+      {
+        "matcher": ".*(write|edit|rm|git push|exec|shell).*",
+        "type": "validate",
+        "command": "iba-validate --intent intent.vibe --action \"$TOOL_ACTION\" || exit 1"
+      }
+    ],
+    "PreMemoryCompact": [
+      {
+        "type": "attach",
+        "command": "iba-attach-hash --memory-summary current"
+      }
+    ]
+  }
+}
