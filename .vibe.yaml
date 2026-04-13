@@ -1,0 +1,16 @@
+governance:
+  enabled: true
+  strictness: "production"   # "creative" for more flexibility
+  escalation: "human"        # "block" or "log-only"
+  audit_enabled: true
+
+vibe_templates:
+  - name: habit-tracker-vaporwave
+    vibe: "A chill habit tracker with retro vaporwave UI, warm sunrise gradients, streak flames like old Tamagotchi, Supabase backend, mobile-first, motivational but never annoying."
+    scope: ["src/", "public/"]
+    forbidden: ["tracking", "ads", "prod-data"]
+
+  - name: minimal-todo
+    vibe: "A clean, distraction-free todo app that feels calm and focused. Local storage only, beautiful typography, keyboard-first."
+    scope: ["src/"]
+    forbidden: ["cloud-sync", "notifications"]
