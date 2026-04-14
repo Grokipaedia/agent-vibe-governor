@@ -1,16 +1,42 @@
-governance:
-  enabled: true
-  strictness: "production"   # "creative" for more flexibility
-  escalation: "human"        # "block" or "log-only"
-  audit_enabled: true
+# .vibe.yaml - Agent Vibe Governor · IBA Intent Certificate
+# Patent GB2603013.0 (Pending) · intentbound.com
 
-vibe_templates:
-  - name: habit-tracker-vaporwave
-    vibe: "A chill habit tracker with retro vaporwave UI, warm sunrise gradients, streak flames like old Tamagotchi, Supabase backend, mobile-first, motivational but never annoying."
-    scope: ["src/", "public/"]
-    forbidden: ["tracking", "ads", "prod-data"]
+intent:
+  description: "Build a SaaS landing page with email capture. No payment integration. No production deploy."
 
-  - name: minimal-todo
-    vibe: "A clean, distraction-free todo app that feels calm and focused. Local storage only, beautiful typography, keyboard-first."
-    scope: ["src/"]
-    forbidden: ["cloud-sync", "notifications"]
+scope:
+  - create
+  - component
+  - style
+  - tailwind
+  - form
+  - mock
+  - staging
+  - frontend
+  - landing
+  - email
+  - write
+
+denied:
+  - stripe
+  - payment
+  - secret
+  - dependency
+  - external_api
+  - production_deploy
+  - production-deployment
+  - database_write
+
+default_posture: DENY_ALL
+
+kill_threshold: "production_deploy | production-deployment | payment | secret"
+
+spend_limits:
+  max_api_calls: 500
+  max_tokens: 100000
+
+temporal_scope:
+  hard_expiry: "2026-12-31"
+
+team_mode:
+  audit_level: "full"
